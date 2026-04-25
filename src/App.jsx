@@ -6,6 +6,7 @@ import Register from "./pages/Register"
 import Dashboard from "./components/Dashboard"
 import LogActivity from './pages/LogActivity'
 import Goals from './pages/Goals'
+import Progress from './pages/Progress'
 
 function ProtectedRoute({ children }) {
   const session = getSession()
@@ -25,6 +26,10 @@ function App() {
         <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/log" element={<ProtectedRoute><LogActivity /></ProtectedRoute>} />
         <Route path="/goals" element={<ProtectedRoute><Goals /></ProtectedRoute>} />
+        <Route path="/progress" element={<ProtectedRoute><Progress /></ProtectedRoute>} />
+        
+         {/* Catch-all — redirect unknown URLs to home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )
