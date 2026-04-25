@@ -4,6 +4,7 @@ import { getSession } from "./utils/storage"
 import Login from './pages/Login'
 import Register from "./pages/Register"
 import Dashboard from "./components/Dashboard"
+import LogActivity from './pages/LogActivity'
 
 function ProtectedRoute({ children }) {
   const session = getSession()
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/log" element={<ProtectedRoute><LogActivity /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   )
