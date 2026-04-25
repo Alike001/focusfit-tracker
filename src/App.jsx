@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { getSession } from "./utils/storage"
 
 import Login from './pages/Login'
-import Register from "./pages/Register"
-import Dashboard from "./components/Dashboard"
+import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
 import LogActivity from './pages/LogActivity'
 import Goals from './pages/Goals'
 import Progress from './pages/Progress'
